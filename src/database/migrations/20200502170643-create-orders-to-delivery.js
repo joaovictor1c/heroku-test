@@ -21,35 +21,43 @@ module.exports = {
         onDelete: 'SET NULL',
         allowNull: false,
       },
-      phone: {
+      name_product: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      description_product: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      phone_client: {
         type: Sequelize.INTEGER,
         allowNull: false,
       },
-      zip_code: {
+      zip_code_client: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      address: {
+      address_client: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      number: {
+      number_client: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      complement: {
+      complement_client: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      state: {
+      state_client: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      city: {
+      city_client: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      district: {
+      district_client: {
         type: Sequelize.STRING,
         allowNull: false,
       },
