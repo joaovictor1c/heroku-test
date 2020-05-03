@@ -2,7 +2,7 @@ import Bee from 'bee-queue';
 
 import redisConfig from '../config/redis';
 
-const jobs = [CancellationMail];
+const jobs = [];
 class Queue {
   constructor() {
     this.queues = {};

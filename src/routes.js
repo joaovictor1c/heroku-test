@@ -18,7 +18,7 @@ routes.use(authMiddleware);
 
 routes.get('/company', CompanyController.index);
 
-routes.post('/orders', PreOrderController.store);
-routes.get('/orders', PreOrderController.index);
+routes.post('/preOrders', PreOrderController.store);
+routes.get('/preOrders', PreOrderController.index);
 
 export default routes;

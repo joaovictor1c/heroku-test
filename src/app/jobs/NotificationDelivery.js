@@ -1,3 +1,5 @@
+import DeliveryMan from '../models/DeliveryMan';
+
 class NotificationDelivery {
   get key() {
     return 'NotificationDelivery';
@@ -5,7 +7,6 @@ class NotificationDelivery {
 
   async handle({ data }) {
     const { company } = data;
-    await Mail.sendMail({});
   }
 }
 export default new NotificationDelivery();
