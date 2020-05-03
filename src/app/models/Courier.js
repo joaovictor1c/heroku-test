@@ -10,7 +10,6 @@ class Courier extends Model {
         cpf: Sequelize.STRING,
         rg: Sequelize.STRING,
         phone: Sequelize.INTEGER,
-        active: Sequelize.BOOLEAN,
         password: Sequelize.VIRTUAL,
         password_hash: Sequelize.STRING,
       },

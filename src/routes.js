@@ -3,7 +3,7 @@ import { Router } from 'express';
 import CourierController from './app/controllers/CourierController';
 import CompanyController from './app/controllers/CompanyController';
 import SessionController from './app/controllers/SessionController';
-import PreOrderController from './app/controllers/PreOrderController';
+import OrderController from './app/controllers/OrderController';
 import authMiddleware from './app/middlewares/auth';
 
 const routes = new Router();
@@ -18,7 +18,8 @@ routes.use(authMiddleware);
 
 routes.get('/company', CompanyController.index);
 
-routes.post('/preOrders', PreOrderController.store);
-routes.get('/preOrders', PreOrderController.index);
+routes.post('/orders', OrderController.store);
+routes.get('/orders', OrderController.index);
+routes.put('/orders/:id', OrderController.uptade);
 
 export default routes;

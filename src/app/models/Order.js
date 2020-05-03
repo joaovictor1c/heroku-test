@@ -1,9 +1,20 @@
-import { Model } from 'sequelize';
+import Sequelize, { Model } from 'sequelize';
 
 class Order extends Model {
   static init(sequelize) {
     super.init(
-      {},
+      {
+        name_product: Sequelize.STRING,
+        description_product: Sequelize.STRING,
+        phone_client: Sequelize.INTEGER,
+        zip_code_client: Sequelize.STRING,
+        address_client: Sequelize.STRING,
+        number_client: Sequelize.STRING,
+        complement_client: Sequelize.STRING,
+        state_client: Sequelize.STRING,
+        city_client: Sequelize.STRING,
+        district_client: Sequelize.STRING,
+      },
       {
         sequelize,
       }
@@ -12,12 +23,12 @@ class Order extends Model {
   }
 
   static associate(models) {
-    this.belongsTo(models.PreOrder, {
-      foreignKey: 'pre_order_id',
-      as: 'pre_order',
+    this.belongsTo(models.Company, {
+      foreignKey: 'company_id',
+      as: 'company',
     });
     this.belongsTo(models.Courier, {
-      foreignKey: 'couriers_id',
+      foreignKey: 'courier_id',
       as: 'couriers',
     });
   }

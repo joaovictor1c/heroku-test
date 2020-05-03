@@ -4,9 +4,8 @@ import databaseConfig from '../config/database';
 import Courier from '../app/models/Courier';
 import Company from '../app/models/Company';
 import Order from '../app/models/Order';
-import PreOrder from '../app/models/PreOrder';
 
-const models = [Company, Courier, PreOrder, Order];
+const models = [Company, Courier, Order];
 
 class Database {
   constructor() {
