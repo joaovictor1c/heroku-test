@@ -5,7 +5,6 @@ class CompanyController {
     const companyExists = await Company.findOne({
       where: { login: req.body.login },
     });
-
     if (companyExists) {
       return res.status(400).json({ error: 'Login already exists' });
     }

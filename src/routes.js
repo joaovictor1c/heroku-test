@@ -1,6 +1,6 @@
 import { Router } from 'express';
 
-import DeliveryManController from './app/controllers/DeliveryManController';
+import CourierController from './app/controllers/CourierController';
 import CompanyController from './app/controllers/CompanyController';
 import SessionController from './app/controllers/SessionController';
 import PreOrderController from './app/controllers/PreOrderController';
@@ -8,7 +8,7 @@ import authMiddleware from './app/middlewares/auth';
 
 const routes = new Router();
 
-routes.post('/deliveryman', DeliveryManController.store);
+routes.post('/courier', CourierController.store);
 routes.post('/company', CompanyController.store);
 
 routes.post('/sessionsDelivery', SessionController.storeDelivery);

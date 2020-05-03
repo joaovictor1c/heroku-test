@@ -9,14 +9,14 @@ module.exports = {
       },
       pre_order_id: {
         type: Sequelize.INTEGER,
-        references: { model: 'pre_order', key: 'id' },
+        references: { model: 'pre_orders', key: 'id' },
         onUpdate: 'CASCADE',
         onDelete: 'SET NULL',
         allowNull: false,
       },
-      delivery_man_id: {
+      courier_id: {
         type: Sequelize.INTEGER,
-        references: { model: 'delivery_man', key: 'id' },
+        references: { model: 'couriers', key: 'id' },
         onUpdate: 'CASCADE',
         onDelete: 'SET NULL',
         allowNull: false,

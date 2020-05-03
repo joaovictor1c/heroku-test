@@ -1,12 +1,13 @@
 import jwt from 'jsonwebtoken';
-import DeliveryMan from '../models/DeliveryMan';
+import Courier from '../models/Courier';
+import Company from '../models/Company';
 import authConfig from '../../config/auth';
 
 class SessionController {
   async storeDelivery(req, res) {
     const { email, password } = req.body;
 
-    const user = await DeliveryMan.findOne({ where: { email } });
+    const user = await Courier.findOne({ where: { email } });
 
     if (!user) {
       return res.status(401).json({ error: 'User not found' });
@@ -27,7 +28,7 @@ class SessionController {
   async storeCompany(req, res) {
     const { login, password } = req.body;
 
-    const user = await DeliveryMan.findOne({ where: { login } });
+    const user = await Company.findOne({ where: { login } });
 
     if (!user) {
       return res.status(401).json({ error: 'User not found' });

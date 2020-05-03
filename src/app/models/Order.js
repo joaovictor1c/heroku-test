@@ -16,9 +16,9 @@ class Order extends Model {
       foreignKey: 'pre_order_id',
       as: 'pre_order',
     });
-    this.belongsTo(models.DeliveryMan, {
-      foreignKey: 'delivery_man_id',
-      as: 'delivery_man',
+    this.belongsTo(models.Courier, {
+      foreignKey: 'couriers_id',
+      as: 'couriers',
     });
   }
 }

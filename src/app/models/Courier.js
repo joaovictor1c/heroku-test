@@ -1,7 +1,7 @@
 import Sequelize, { Model } from 'sequelize';
 import bcrypt from 'bcryptjs';
 
-class DeliveryMan extends Model {
+class Courier extends Model {
   static init(sequelize) {
     super.init(
       {
@@ -32,4 +32,4 @@ class DeliveryMan extends Model {
   }
 }
 
-export default DeliveryMan;
+export default Courier;
