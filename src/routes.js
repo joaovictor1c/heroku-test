@@ -3,7 +3,7 @@ import { Router } from 'express';
 import DeliveryManController from './app/controllers/DeliveryManController';
 import CompanyController from './app/controllers/CompanyController';
 import SessionController from './app/controllers/SessionController';
-import OrdersConrtoller from './app/controllers/OrdersController';
+import PreOrderController from './app/controllers/PreOrderController';
 import authMiddleware from './app/middlewares/auth';
 
 const routes = new Router();
@@ -16,7 +16,9 @@ routes.post('/sessionsCompany', SessionController.storeCompany);
 
 routes.use(authMiddleware);
 
-routes.post('/orders', OrdersConrtoller.store);
-routes.get('/orders', OrdersConrtoller.index);
+routes.get('/company', CompanyController.index);
+
+routes.post('/orders', PreOrderController.store);
+routes.get('/orders', PreOrderController.index);
 
 export default routes;

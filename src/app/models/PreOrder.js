@@ -1,6 +1,6 @@
 import Sequelize, { Model } from 'sequelize';
 
-class Orders extends Model {
+class PreOrder extends Model {
   static init(sequelize) {
     super.init(
       {
@@ -19,7 +19,15 @@ class Orders extends Model {
         sequelize,
       }
     );
+    return this;
+  }
+
+  static associate(models) {
+    this.belongsTo(models.Company, {
+      foreignKey: 'company_id',
+      as: 'company',
+    });
   }
 }
 
-export default Orders;
+export default PreOrder;

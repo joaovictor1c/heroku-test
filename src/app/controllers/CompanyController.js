@@ -82,6 +82,24 @@ class CompanyController {
       district,
     });
   }
+
+  async index(req, res) {
+    const company = await Company.findAll({
+      where: { id: req.userId },
+      attributes: [
+        'branch',
+        'phone',
+        'zip_code',
+        'address',
+        'number',
+        'complement',
+        'state',
+        'city',
+        'district',
+      ],
+    });
+    return res.json(company);
+  }
 }
 
 export default new CompanyController();
