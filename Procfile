@@ -1,2 +1,2 @@
-web: yarn start
 web: yarn sequelize db:migrate
+web1: yarn start
